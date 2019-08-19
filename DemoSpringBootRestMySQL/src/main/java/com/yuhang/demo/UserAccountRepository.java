@@ -138,7 +138,7 @@ public class UserAccountRepository {
 	// YH: Query DB to delete a particular user account by id.
 	public void deleteUserAccount(int id) {
 		
-		String sql = "delete from serAccount where id=?";
+		String sql = "delete from userAccount where id=?";
 		try
 		{
 			PreparedStatement st = con.prepareStatement(sql);

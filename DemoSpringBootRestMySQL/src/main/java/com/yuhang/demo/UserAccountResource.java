@@ -2,8 +2,12 @@ package com.yuhang.demo;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +35,7 @@ public class UserAccountResource {
 		return ua;
 	}
 	
+	
 	// YH: The method responsible for handling HTTP POST requests needs to be annotated with @PostMapping annotation.
 	@PostMapping("userAccount")
 	// YH: To be able to convert the JSON sent as HTTP Body content into a Java object which we can use in our application,
@@ -38,5 +43,27 @@ public class UserAccountResource {
 	public void createUserAccount(@RequestBody UserAccount ua) {
 		
 		uaRepo.addUserAccount(ua);
+	}
+
+
+	// YH: The method responsible for handling HTTP PUT requests needs to be annotated with @PutMapping annotation.
+	@PutMapping("userAccount")
+	public void updateUserAccount(@RequestBody UserAccount ua) {
+		
+		if(uaRepo.getUserAccount(ua.getId()).getId()==0)
+		{uaRepo.addUserAccount(ua);}
+		else
+		{uaRepo.updateUserAccount(ua);}
+		
+	}
+
+	
+	// YH: The method responsible for handling HTTP DELETE requests needs to be annotated with @DeleteMapping annotation.
+	@DeleteMapping("userAccount/{uid}")	
+	public void delUserAccount(@PathVariable("uid") int id) {
+		
+		if(uaRepo.getUserAccount(id).getId()!=0)
+			uaRepo.deleteUserAccount(id);
+		
 	}
 }

@@ -1,5 +1,5 @@
 # DemoSpringBootRestMySQL
-This demo intends to supply a quick-start template for Spring Boot REST APIs with MySQL. 
+This demo intends to supply a quick-start template for a project using Spring Boot REST APIs and MySQL. 
 
 Author: Dr. YUHANG ZHAO
 

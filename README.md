@@ -6,9 +6,15 @@ Author: Dr. YUHANG ZHAO
 Introduction: 
 In this demo we supply a quick-start code base with explanation for constructing a REST service with MySQL.
 
-Big Picture:
-- In UserAccountResourse.java, which is a RestController, we have methods to handle HTTP CRUD requests. According to the principle that the database manipulation should be separated from CONTROLLER and located in MODEL, the methods are implemented by calling methods in UserAccountRepository.java;
-- In UserAccountRepository.java, which is a MODEL responsible for interaction with DB, we use the constructor to establish the connection with DB. In this class, we also have methods implemented by querying DB.
+Overview:
+According to the principle that the database manipulation should be separated from CONTROLLER and located in MODEL, the methods in UserAccountResourse.java handling HTTP CRUD requests are implemented by calling methods implemented by querying DB in UserAccountRepository.java;
+In this demo we covered the use of some new stuffs, i.e.,
+HTTP CRUD requests, Postman,
+@RestController,
+@RequestMapping, @PostMapping, @PutMapping, @DeleteMapping,
+@PathVariable,
+@RequestBody,
+dependency "MySQL-connector", JDBC, MySQL queries.
 
 Future Work: Replace MySQL queries with JPA.
 

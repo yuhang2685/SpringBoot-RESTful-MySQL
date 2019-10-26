@@ -10,9 +10,9 @@ In this demo we show how to construct a RESTful web service using SpringBoot and
 
 
 ### Overview:
-The methods handling `HTTP` `CRUD` requests reside in `controller` layer,
-and are implemented by calling methods in `service` layer
-which are implemented by methods in `repository` layer for querying DB.
+The methods handling `HTTP` `CRUD` requests reside in `Web` layer (`controller` component),
+and are implemented by calling methods in `Service` layer
+which are implemented by methods in `Repository` layer for querying DB.
 Such modularization separates concerns.
 
 ![ApplicationArchitecture](https://github.com/yuhang2685/SpringBoot-RESTful-MySQL/blob/master/ApplicationLayers.png)

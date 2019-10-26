@@ -1,13 +1,8 @@
 ## SpringBoot-RESTful-MySQL
 
-Construct a RESTful web service using SpringBoot and MySQL. 
+Construct a `RESTful` web service using `SpringBoot` and `MySQL`. 
 
 #### Author: Dr. YUHANG ZHAO
-
-
-### Introduction: 
-In this demo we show how to construct a RESTful web service using SpringBoot and MySQL. 
-
 
 ### Overview:
 The methods handling `HTTP` `CRUD` requests reside in `Web` layer (`controller` component),
@@ -27,7 +22,7 @@ Such modularization separates concerns.
 - @DeleteMapping
 - @PathVariable
 - @RequestBody
-- dependency "MySQL-connector" 
+- Dependency "MySQL-connector" 
 - JDBC
 - MySQL queries
 
@@ -37,6 +32,10 @@ Such modularization separates concerns.
 - Java 1.8
 - Spring Boot v2.1.7.RELEASE
 - MySQL Connector 8.0.17
+
+### Related Projects
+[SpringBoot-RESTful-MySQL-JPA](https://github.com/yuhang2685/SpringBoot-RESTful-MySQL-JPA),
+which is a `RESTful` web service using `SpringBoot` and `JPA` for `MySQL`.
 
 
 ### Reference: 
